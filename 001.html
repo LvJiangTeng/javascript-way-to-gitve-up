@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Points(x, y) {
+            this.x = x;
+            this.y = y;
+        }
+        var p = new Points(1, 1)
+        Points.prototype.r = function () {
+            return Math.sqrt(
+                this.x * this.x + this.y * this.y
+            )
+        }
+        console.log(p.r())
+
+        function debug(msg) {
+            var log = document.getElementById('debuglog')
+            if (!log) {
+                log = document.createElement("div")
+                log.id = "debuglog"
+                log.innerHTML = "<h1>debug</h1>"
+                document.body.appendChild(log)
+            }
+            var pre = document.createElement("pre");
+            var text = document.createTextNode(msg);
+            pre.appendChild(text)
+            log.appendChild(pre)
+        }
+        debug("哎呦 我曹")
+
+        function hide(e, reflow) {
+            if (reflow) {
+                e.style.display = "none"
+            } else {
+                e.style.display = "block"
+            }
+        }
+        var div = document.getElementById('debuglog')
+        console.log(div)
+        hide(div, true)
+        hide(div, false)
+
+        function hightlight(e) {
+            if (!e.className) e.className = 'hilite'
+            else e.className += 'hilite'
+        }
+        hightlight(div)
+    </script>
+</body>
+
+</html>
