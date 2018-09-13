@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .output {
+            font-weight: bold;
+        }
+
+        #payment {
+            text-decoration: underline;
+
+        }
+
+        #graph {
+            border: solid black 1px;
+        }
+
+        th,
+        td {
+            vertical-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>Enter Loan Data:</th>
+            <td></td>
+            <th>Loan Balance, Comulative Equity</th>
+        </tr>
+        <tr>
+            <th>Amount of Loan ($): </th>
+            <td><input id="amount" type="text" onchange="calculate()"></td>
+            <td rowspan="8"></td>
+            <canvas id="graph" width="400" height="250"></canvas>
+        </tr>
+        <tr>
+            <th>Annual of Loan (%): </th>
+            <td><input id="apr" type="text" onchange="calculate()"></td>
+        </tr>
+        <tr>
+            <th>years: </th>
+            <td><input id="year" type="text" onchange="calculate()"></td>
+        </tr>
+        <tr>
+            <th>Zipcode: </th>
+            <td><input id="zipcode" type="text" onchange="calculate()"></td>
+        </tr>
+        <tr>
+            <th>Approx: </th>
+            <td><button id="Approx" type="text" onchange="calculate()"></button></td>
+        </tr>
+        <tr>
+            <th>Monthly payment: </th>
+            <td><span id="payment" class="output" type="text"></span></td>
+        </tr>
+        <tr>
+            <th>total payment: </th>
+            <td><span id="total" class="output" type="text"></span></td>
+        </tr>
+        <tr>
+            <th>total interest: </th>
+            <td><span id="interest" class="output" type="text"></span></td>
+        </tr>
+        <tr>
+            <th>Sponsors interest: </th>
+            <td colspan="2">apply for your loan<div id="lenders"></div>
+            </td>
+        </tr>
+    </table>
+    <script>
+        'use strict'
+        function calculate() {
+
+        }
+    </script>
+</body>
+
+</html>
